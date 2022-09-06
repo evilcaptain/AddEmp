@@ -1,6 +1,6 @@
-FROM ubuntu:18.04
+FROM amazonlinux:latest
 
-RUN apt-get update -y && apt-get install -y python-pip python-dev
+RUN yum update -y && yum install python-pip python-dev -y
 
 COPY ./requirements.txt /app/addemp/requirements.txt
 WORKDIR /app/addemp
