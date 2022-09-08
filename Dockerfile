@@ -1,6 +1,6 @@
 FROM amazonlinux:latest
 
-RUN yum update -y && yum install python-pip python-dev -y
+RUN yum update -y && yum install python-pip python3 -y && pip install --upgrade pip
 
 COPY ./requirements.txt /app/addemp/requirements.txt
 WORKDIR /app/addemp
@@ -12,4 +12,4 @@ COPY ./AddEmpOutput.html /app/addemp/templates/AddEmpOutput.html
 
 EXPOSE 80
 
-ENTRYPOINT ["python2", "AddEmp.py"]
+ENTRYPOINT ["python3", "AddEmp.py"]
