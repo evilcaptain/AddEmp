@@ -32,11 +32,11 @@ def updatedatabase():
     emp_id = request.form['emp_id']
     first_name = request.form['first_name']
     last_name = request.form['last_name']
-    pri_skill = request.form['pri_skill']
+    primary_skills = request.form['primary_skills']
     location = request.form['location']
     # image_file = request.form['image_file']
 
-    insert_sql = "INSERT INTO Employee VALUES (%s, %s, %s, %s, %s)"
+    insert_sql = "INSERT INTO employee VALUES (%s, %s, %s, %s, %s)"
     cursor = db_conn.cursor()
 
     try:
